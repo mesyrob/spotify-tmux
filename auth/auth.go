@@ -37,7 +37,7 @@ func NewAuthService(clientID, clientSecret, redirectURI string) *AuthService {
 	config := &oauth2.Config{
 		ClientID:     clientID,
 		ClientSecret: clientSecret,
-		RedirectURI:  redirectURI,
+		RedirectURL:  redirectURI,
 		Scopes: []string{
 			"user-read-playback-state",
 			"user-modify-playback-state",

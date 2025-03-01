@@ -3,10 +3,18 @@ package config
 
 import (
 	"encoding/json"
+	"github.com/joho/godotenv"
 	"errors"
 	"os"
 	"path/filepath"
+	"log"
 )
+
+func init() {
+    if err := godotenv.Load(); err != nil {
+        log.Fatal("Error loading .env file")
+    }
+}
 
 // Config holds the application configuration
 type Config struct {
@@ -21,8 +29,8 @@ func DefaultConfig() Config {
 	homeDir, _ := os.UserHomeDir()
 	
 	return Config{
-		ClientID:     "",
-		ClientSecret: "",
+		ClientID:     os.Getenv("CLIENT_ID"),
+		ClientSecret: os.Getenv("CLIENT_SECRET"),
 		RedirectURI:  "http://localhost:8080/callback",
 		TokenFile:    filepath.Join(homeDir, ".spotify-tmux", "token.json"),
 	}
