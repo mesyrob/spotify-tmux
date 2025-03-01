@@ -8,10 +8,10 @@ import (
 	"os/signal"
 	"syscall"
 	
-	"github.com/yourusername/spotify-tmux/auth"
-	"github.com/yourusername/spotify-tmux/config"
-	"github.com/yourusername/spotify-tmux/player"
-	"github.com/yourusername/spotify-tmux/ui"
+	"github.com/mesyrob/spotify-tmux/auth"
+	"github.com/mesyrob/spotify-tmux/config"
+	"github.com/mesyrob/spotify-tmux/player"
+	"github.com/mesyrob/spotify-tmux/ui"
 )
 
 func main() {

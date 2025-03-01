@@ -8,7 +8,7 @@ import (
 
 	"github.com/gdamore/tcell/v2"
 	"github.com/rivo/tview"
-	"github.com/yourusername/spotify-tmux/player"
+	"github.com/mesyrob/spotify-tmux/player"
 )
 
 // PlayerController defines the interface for player control
